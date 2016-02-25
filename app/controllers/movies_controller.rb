@@ -11,7 +11,9 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    @my_view='hilite'
+    @sort=params[:sort]
+    @movies =Movie.order(@sort).all
   end
 
   def new
