@@ -16,13 +16,19 @@ Rails.application.routes.draw do
 
   resources :movies
   
+  get 'update/'=>'movies#movie_update'
+  put 'update/'=>'movies#movie_update2'
+  get 'delete/'=>'movies#delete'
+  get 'delete_by_rating/'=>'movies#deleteRating'
+  
+  # get 'movies/:id'=>'movies#namedelete'
   # Example resource route with options:
   #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
+    # member do
+    #   get 'short'
+    #   post 'toggle'
+    # end
+
   #     collection do
   #       get 'sold'
   #     end
